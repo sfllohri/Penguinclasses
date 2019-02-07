@@ -3,11 +3,18 @@
 #que el dino, diciendo sus atributos.
 
 class Persona:
+    hobbie = []
     def __init__ (self, un_nombre, una_edad, una_prof):
         self.nombre = un_nombre
         self.edad = una_edad
         self.profesion = una_prof
         print ("Hola soy", self.nombre, "tengo", self.edad, "anhos", "y soy una", self.profesion)
+
+    def getHobbies(self):
+        return self.hobbie
+    
+    def agregarHobbie(self,nuevoHobbie):
+        self.hobbie.append(nuevoHobbie)
 
     def gritar(self):
         print("ESTOY GRITANDO!", self.profesion)
@@ -23,3 +30,9 @@ print(charlie.nombre)  #aca se imprime solo el nombre de la clase, porque ya le 
 charlie.gritar()
 charlie.cumple()
 #esto es un cambio
+charlie.getHobbies()
+charlie.agregarHobbie('jugar play')
+charlie.getHobbies()
+
+# camelCase
+# snake_case
